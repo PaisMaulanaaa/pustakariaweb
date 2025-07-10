@@ -50,7 +50,7 @@
 
 Dibangun dengan framework **CodeIgniter 4** yang andal, Pustakaria menawarkan backend yang cepat dan aman. Antarmuka pengguna yang modern dan responsif diimplementasikan menggunakan **Bootstrap 5**, memastikan pengalaman pengguna yang optimal di berbagai perangkat. Seluruh data, mulai dari detail buku hingga riwayat peminjaman, disimpan dalam database **MySQL** yang terstruktur.
 
-🌐 **Website Demo:** [https://pustakaria.ct.ws/](https://pustakaria.ct.ws/)
+## 🌐 **Website Demo:** [https://pustakaria.ct.ws/](https://pustakaria.ct.ws/)
 
 ### 🎯 **Tujuan Proyek**
 
