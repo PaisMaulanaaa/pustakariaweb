@@ -1,0 +1,233 @@
+/**
+ * Modern Toast Notification Styles
+ * Dark Blue Theme Consistent
+ */
+
+:root {
+    --toast-primary-dark-blue: #1e3a8a;
+    --toast-navy-blue: #0f172a;
+    --toast-slate-blue: #334155;
+    --toast-success: #10b981;
+    --toast-error: #ef4444;
+    --toast-warning: #f59e0b;
+    --toast-info: #3b82f6;
+    --toast-white: #ffffff;
+    --toast-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+    --toast-shadow-hover: 0 15px 35px rgba(15, 23, 42, 0.25);
+}
+
+/* Toast Container */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    pointer-events: none;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Toast Base */
+.toast {
+    background: var(--toast-white);
+    border-radius: 12px;
+    box-shadow: var(--toast-shadow);
+    overflow: hidden;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: auto;
+    position: relative;
+    border-left: 4px solid;
+    min-height: 64px;
+}
+
+/* Toast Show Animation */
+.toast-show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Toast Hide Animation */
+.toast-hide {
+    transform: translateX(100%);
+    opacity: 0;
+    margin-top: -80px;
+}
+
+/* Toast Content */
+.toast-content {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    gap: 12px;
+    position: relative;
+}
+
+/* Toast Icon */
+.toast-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* Toast Message */
+.toast-message {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--toast-navy-blue);
+}
+
+/* Toast Close Button */
+.toast-close {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--toast-slate-blue);
+    transition: all 0.2s ease;
+    font-size: 12px;
+}
+
+.toast-close:hover {
+    background: rgba(51, 65, 85, 0.1);
+    color: var(--toast-navy-blue);
+}
+
+/* Progress Bar */
+.toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: currentColor;
+    opacity: 0.3;
+    animation: toast-progress linear forwards;
+    transform-origin: left;
+}
+
+@keyframes toast-progress {
+    from {
+        transform: scaleX(1);
+    }
+    to {
+        transform: scaleX(0);
+    }
+}
+
+/* Toast Types */
+.toast-success {
+    border-left-color: var(--toast-success);
+}
+
+.toast-success .toast-icon {
+    color: var(--toast-success);
+}
+
+.toast-success .toast-progress {
+    background: var(--toast-success);
+}
+
+.toast-error {
+    border-left-color: var(--toast-error);
+}
+
+.toast-error .toast-icon {
+    color: var(--toast-error);
+}
+
+.toast-error .toast-progress {
+    background: var(--toast-error);
+}
+
+.toast-warning {
+    border-left-color: var(--toast-warning);
+}
+
+.toast-warning .toast-icon {
+    color: var(--toast-warning);
+}
+
+.toast-warning .toast-progress {
+    background: var(--toast-warning);
+}
+
+.toast-info {
+    border-left-color: var(--toast-info);
+}
+
+.toast-info .toast-icon {
+    color: var(--toast-info);
+}
+
+.toast-info .toast-progress {
+    background: var(--toast-info);
+}
+
+/* Hover Effects */
+.toast:hover {
+    box-shadow: var(--toast-shadow-hover);
+    transform: translateX(-5px);
+}
+
+.toast-show:hover .toast-progress {
+    animation-play-state: paused;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .toast-container {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+    
+    .toast {
+        margin: 0;
+    }
+    
+    .toast-content {
+        padding: 12px;
+    }
+    
+    .toast-message {
+        font-size: 13px;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .toast {
+        background: var(--toast-navy-blue);
+        color: var(--toast-white);
+    }
+    
+    .toast-message {
+        color: var(--toast-white);
+    }
+    
+    .toast-close {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .toast-close:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--toast-white);
+    }
+}

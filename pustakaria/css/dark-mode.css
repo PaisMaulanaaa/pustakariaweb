@@ -1,0 +1,67 @@
+/* Dark Mode Support */
+[data-theme="dark"] {
+  --primary-brown: #D2691E;
+  --secondary-brown: #CD853F;
+  --light-brown: #F4A460;
+  --dark-brown: #8B4513;
+  --cream: #1a1a1a;
+  --light-cream: #2d2d2d;
+  --dark-cream: #404040;
+  --text-dark: #f5f5f5;
+  --text-light: #1a1a1a;
+  --shadow: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] body {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: var(--text-dark);
+}
+
+[data-theme="dark"] .navbar {
+  background: linear-gradient(135deg, #2d2d2d 0%, #404040 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .card {
+  background: rgba(45, 45, 45, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .form-control {
+  background-color: var(--light-cream);
+  border-color: var(--light-brown);
+  color: var(--text-dark);
+}
+
+[data-theme="dark"] .table {
+  background-color: var(--light-cream);
+  color: var(--text-dark);
+}
+
+[data-theme="dark"] .table thead th {
+  background-color: var(--secondary-brown);
+  color: var(--text-light);
+}
+
+/* Dark Mode Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: var(--primary-brown);
+  color: var(--light-cream);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}

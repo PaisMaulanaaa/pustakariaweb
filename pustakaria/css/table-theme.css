@@ -1,0 +1,325 @@
+/**
+ * Table Theme - Dark Blue Consistent
+ * Styling untuk semua table di aplikasi
+ */
+
+:root {
+    --table-primary-dark-blue: #1e3a8a;
+    --table-navy-blue: #0f172a;
+    --table-slate-blue: #334155;
+    --table-cream-dark: #f1f5f9;
+    --table-blue-50: #eff6ff;
+    --table-blue-100: #dbeafe;
+    --table-blue-200: #bfdbfe;
+    --table-blue-600: #2563eb;
+    --table-blue-700: #1d4ed8;
+    --table-white: #ffffff;
+    --table-border: #e2e8f0;
+    --table-hover: #f8fafc;
+}
+
+/* Base Table Styling */
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(30, 58, 138, 0.1);
+    border: 1px solid var(--table-border);
+    background: var(--table-white);
+}
+
+/* Table Header */
+.table thead th {
+    background: linear-gradient(135deg, var(--table-primary-dark-blue), var(--table-navy-blue));
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 1rem 0.75rem;
+    border: none;
+    position: relative;
+}
+
+.table thead th:first-child {
+    border-top-left-radius: 0.75rem;
+}
+
+.table thead th:last-child {
+    border-top-right-radius: 0.75rem;
+}
+
+/* Table Body */
+.table tbody td {
+    padding: 0.875rem 0.75rem;
+    border-color: var(--table-border);
+    vertical-align: middle;
+    font-size: 0.875rem;
+    color: var(--table-slate-blue);
+    background: var(--table-white);
+    transition: all 0.2s ease;
+}
+
+.table tbody tr {
+    transition: all 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background: var(--table-blue-50);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(30, 58, 138, 0.1);
+}
+
+.table tbody tr:hover td {
+    background: transparent;
+}
+
+/* Striped Tables */
+.table-striped tbody tr:nth-of-type(odd) {
+    background: var(--table-cream-dark);
+}
+
+.table-striped tbody tr:nth-of-type(odd):hover {
+    background: var(--table-blue-50);
+}
+
+/* Bordered Tables */
+.table-bordered {
+    border: 1px solid var(--table-border);
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid var(--table-border);
+}
+
+/* Enhanced Table (untuk halaman borrowings) */
+.table-enhanced {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
+    border: 1px solid var(--table-blue-200);
+}
+
+.table-enhanced thead th {
+    background: linear-gradient(135deg, var(--table-primary-dark-blue), var(--table-blue-700));
+    color: #ffffff !important;
+    font-weight: 600;
+    border: none;
+    padding: 1rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table-enhanced tbody td {
+    padding: 1rem;
+    border-color: var(--table-blue-100);
+    vertical-align: middle;
+}
+
+.table-enhanced tbody tr:hover {
+    background: var(--table-blue-50);
+}
+
+/* DataTables Integration */
+.dataTables_wrapper {
+    font-family: inherit;
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 1rem;
+}
+
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_paginate {
+    margin-top: 1rem;
+}
+
+.dataTables_wrapper .dataTables_length select,
+.dataTables_wrapper .dataTables_filter input {
+    border: 1px solid var(--table-border);
+    border-radius: 0.375rem;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+.dataTables_wrapper .dataTables_length select:focus,
+.dataTables_wrapper .dataTables_filter input:focus {
+    border-color: var(--table-primary-dark-blue);
+    box-shadow: 0 0 0 0.2rem rgba(30, 58, 138, 0.25);
+    outline: none;
+}
+
+/* DataTables Pagination */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 0.375rem 0.75rem;
+    margin: 0 0.125rem;
+    border-radius: 0.375rem;
+    border: 1px solid var(--table-border);
+    background: var(--table-white);
+    color: var(--table-slate-blue);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: var(--table-blue-50);
+    border-color: var(--table-primary-dark-blue);
+    color: var(--table-primary-dark-blue);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background: var(--table-primary-dark-blue);
+    border-color: var(--table-primary-dark-blue);
+    color: var(--table-white);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Table Actions */
+.table .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 0.375rem;
+    margin: 0 0.125rem;
+}
+
+.table .btn-sm {
+    padding: 0.125rem 0.375rem;
+    font-size: 0.6875rem;
+}
+
+/* Badge Styling in Tables */
+.table .badge {
+    font-size: 0.6875rem;
+    padding: 0.375rem 0.5rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+}
+
+.table .badge-enhanced {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Status Badges */
+.badge-status-active {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: var(--table-white);
+}
+
+.badge-status-inactive {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: var(--table-white);
+}
+
+.badge-status-pending {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: var(--table-white);
+}
+
+.badge-status-returned {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: var(--table-white);
+}
+
+.badge-status-borrowed {
+    background: linear-gradient(135deg, var(--table-primary-dark-blue), var(--table-navy-blue));
+    color: var(--table-white);
+}
+
+/* Responsive Tables */
+.table-responsive {
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(30, 58, 138, 0.1);
+}
+
+@media (max-width: 768px) {
+    .table thead th,
+    .table tbody td {
+        padding: 0.5rem 0.375rem;
+        font-size: 0.8125rem;
+    }
+    
+    .table .btn {
+        padding: 0.125rem 0.25rem;
+        font-size: 0.6875rem;
+    }
+}
+
+/* Loading State */
+.table-loading {
+    position: relative;
+    opacity: 0.7;
+}
+
+.table-loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--table-primary-dark-blue), var(--table-blue-600), var(--table-primary-dark-blue));
+    background-size: 200% 100%;
+    animation: table-loading 2s infinite;
+}
+
+@keyframes table-loading {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Empty State */
+.table-empty {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--table-slate-blue);
+}
+
+.table-empty i {
+    font-size: 3rem;
+    color: var(--table-blue-200);
+    margin-bottom: 1rem;
+}
+
+/* Table Card Integration */
+.card .table {
+    margin-bottom: 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.card .table thead th:first-child {
+    border-top-left-radius: 0;
+}
+
+.card .table thead th:last-child {
+    border-top-right-radius: 0;
+}
+
+/* Force white text in all table headers */
+.table thead th,
+.table-enhanced thead th,
+.table-bordered thead th,
+.table-striped thead th,
+.dataTables_wrapper table thead th,
+table thead th {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, var(--table-primary-dark-blue), var(--table-navy-blue)) !important;
+}

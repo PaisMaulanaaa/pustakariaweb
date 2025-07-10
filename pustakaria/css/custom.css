@@ -1,0 +1,213 @@
+/* Custom Color Scheme - Brown & Cream */
+
+:root {
+    --primary: #8B4513;      /* Saddle Brown */
+    --secondary: #A0522D;    /* Sienna */
+    --success: #6B8E23;      /* Olive Drab */
+    --info: #5F9EA0;         /* Cadet Blue */
+    --warning: #DAA520;      /* Goldenrod */
+    --danger: #CD5C5C;       /* Indian Red */
+    --light: #FAFAD2;        /* Light Goldenrod Yellow */
+    --dark: #654321;         /* Dark Brown */
+    --cream: #FFFDD0;        /* Cream */
+    --brown: #8B4513;        /* Saddle Brown */
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: var(--dark);
+}
+
+.sidebar-dark .nav-item .nav-link {
+    color: var(--cream);
+}
+
+.sidebar-dark .nav-item .nav-link:hover {
+    background-color: var(--secondary);
+}
+
+.sidebar-dark .nav-item.active .nav-link {
+    background-color: var(--secondary);
+}
+
+/* Topbar */
+.topbar {
+    background-color: var(--cream);
+}
+
+.topbar .nav-item .nav-link {
+    color: var(--dark);
+}
+
+/* Cards */
+.card {
+    border-color: var(--cream);
+}
+
+.card-header {
+    background-color: var(--cream);
+    border-bottom: 1px solid var(--brown);
+}
+
+.border-left-primary {
+    border-left: 0.25rem solid var(--primary) !important;
+}
+
+.border-left-success {
+    border-left: 0.25rem solid var(--success) !important;
+}
+
+.border-left-info {
+    border-left: 0.25rem solid var(--info) !important;
+}
+
+.border-left-warning {
+    border-left: 0.25rem solid var(--warning) !important;
+}
+
+.border-left-danger {
+    border-left: 0.25rem solid var(--danger) !important;
+}
+
+/* Text Colors */
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-success {
+    color: var(--success) !important;
+}
+
+.text-info {
+    color: var(--info) !important;
+}
+
+.text-warning {
+    color: var(--warning) !important;
+}
+
+.text-danger {
+    color: var(--danger) !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.btn-success {
+    background-color: var(--success);
+    border-color: var(--success);
+}
+
+.btn-info {
+    background-color: var(--info);
+    border-color: var(--info);
+}
+
+.btn-warning {
+    background-color: var(--warning);
+    border-color: var(--warning);
+}
+
+.btn-danger {
+    background-color: var(--danger);
+    border-color: var(--danger);
+}
+
+/* Badges */
+.badge-primary {
+    background-color: var(--primary);
+}
+
+.badge-success {
+    background-color: var(--success);
+}
+
+.badge-info {
+    background-color: var(--info);
+}
+
+.badge-warning {
+    background-color: var(--warning);
+}
+
+.badge-danger {
+    background-color: var(--danger);
+}
+
+/* Background Colors */
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-success {
+    background-color: var(--success) !important;
+}
+
+.bg-info {
+    background-color: var(--info) !important;
+}
+
+.bg-warning {
+    background-color: var(--warning) !important;
+}
+
+.bg-danger {
+    background-color: var(--danger) !important;
+}
+
+.bg-light {
+    background-color: var(--light) !important;
+}
+
+.bg-dark {
+    background-color: var(--dark) !important;
+}
+
+/* Tables */
+.table-bordered {
+    border-color: var(--cream);
+}
+
+/* Legacy table styles - now using table-theme.css for consistent dark blue theme */
+
+/* Forms */
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(139, 69, 19, 0.25);
+}
+
+/* Custom Styles */
+body {
+    background-color: var(--light);
+}
+
+.card-body {
+    background-color: white;
+}
+
+/* Chart Colors */
+.chart-area canvas {
+    background-color: white;
+}
+
+/* Pagination */
+.page-item.active .page-link {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.page-link {
+    color: var(--primary);
+}
+
+.page-link:hover {
+    color: var(--secondary);
+} 
